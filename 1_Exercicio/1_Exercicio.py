@@ -21,7 +21,7 @@ def cem_anos_em():
         else:
             subtracao_anos = 100 - int(idade_usuario)
             print(f"{nome_usuario}, você fará 100 anos "
-                  "em {ano_corrente + subtracao_anos}.")
+                  f"em {ano_corrente + subtracao_anos}.")
             while True:
                 print("Quer digitar uma nova idade?")
                 resposta = input("S/N\n").upper()
