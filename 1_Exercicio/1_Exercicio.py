@@ -12,7 +12,7 @@ def cem_anos_em():
     while True:
         if int(idade_usuario) >= 100:
             print("Você já tem 100 anos ou mais. Por favor, "
-                           "digite um número válido.")
+                  "digite um número válido.")
             cem_anos_em()
         else:
             subtracao_anos = 100 - int(idade_usuario)
