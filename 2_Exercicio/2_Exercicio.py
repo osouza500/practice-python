@@ -1,12 +1,15 @@
 import time
 
+
 def executar_programa():
     par_ou_impar()
     divisao_exata()
 
+
 def printar_pausar(mensagem):
     time.sleep(1)
     print(mensagem)
+
 
 def par_ou_impar():
     try:
@@ -22,12 +25,13 @@ def par_ou_impar():
             printar_pausar(f"{numero} é um número ímpar.\n")
     except ValueError:
         printar_pausar("Por favor, digite um número válido.")
-        par_ou_impar()        
-    
+        par_ou_impar()
+
     # Desafio extra: coletar dois números e verificar se a
     # divisão entre ambos é exata.
 
-def divisao_exata():   
+
+def divisao_exata():
     try:
         printar_pausar("Agora vamos verificar se a divisão "
                        "entre dois números é exata.")
@@ -38,14 +42,15 @@ def divisao_exata():
         resultado = numero_2 % checar_numero
         if resultado == 0:
             printar_pausar(f"{numero_2} dividido por {checar_numero} é "
-                   "uma divisão exata.")
+                           "uma divisão exata.")
             printar_pausar("Até logo!")
         elif resultado != 0:
             printar_pausar(f"{numero_2} dividido por {checar_numero} "
-                   "não é uma divisão exata.")
+                           "não é uma divisão exata.")
             printar_pausar("Até logo!")
     except ValueError:
         printar_pausar("Por favor, digite um número válido.")
-        divisao_exata()                
+        divisao_exata()
+
 
 executar_programa()
