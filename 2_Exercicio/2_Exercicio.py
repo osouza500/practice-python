@@ -10,14 +10,16 @@ def printar_pausar(mensagem):
 
 def par_ou_impar():
     try:
+        printar_pausar("Vamos descobrir se um número é par, par "
+                       "e múltiplo de 4 ou ímpar.")
         printar_pausar("Por favor, digite um número.")
         numero = int(input())
         if numero % 4 == 0 and numero % 2 == 0:
-            printar_pausar(f"{numero} é um número par e múltiplo de 4.")
+            printar_pausar(f"{numero} é um número par e múltiplo de 4.\n")
         elif numero % 4 != 0 and numero % 2 == 0:
-            printar_pausar(f"{numero} é um número par.")
+            printar_pausar(f"{numero} é um número par.\n")
         elif numero % 2 != 0:
-            printar_pausar(f"{numero} é um número ímpar.")
+            printar_pausar(f"{numero} é um número ímpar.\n")
     except ValueError:
         printar_pausar("Por favor, digite um número válido.")
         par_ou_impar()        
@@ -37,9 +39,11 @@ def divisao_exata():
         if resultado == 0:
             printar_pausar(f"{numero_2} dividido por {checar_numero} é "
                    "uma divisão exata.")
+            printar_pausar("Até logo!")
         elif resultado != 0:
             printar_pausar(f"{numero_2} dividido por {checar_numero} "
                    "não é uma divisão exata.")
+            printar_pausar("Até logo!")
     except ValueError:
         printar_pausar("Por favor, digite um número válido.")
         divisao_exata()                
