@@ -53,4 +53,5 @@ def divisao_exata():
         divisao_exata()
 
 
-executar_programa()
+if __name__ == "__main__":
+    executar_programa()
