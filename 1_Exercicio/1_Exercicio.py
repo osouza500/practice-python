@@ -12,14 +12,14 @@ def cem_anos_em():
     data_completa = datetime.date.today()
     ano_corrente = data_completa.year
     nome_usuario = input("Qual é o seu nome?\n")
-    idade_usuario = input("Qual é a sua idade?\n")
+    idade_usuario = int(input("Qual é a sua idade?\n"))
     while True:
         if int(idade_usuario) >= 100:
             print("Você já tem 100 anos ou mais. Por favor, "
                   "digite um número válido.")
             cem_anos_em()
         else:
-            subtracao_anos = 100 - int(idade_usuario)
+            subtracao_anos = 100 - idade_usuario
             print(f"{nome_usuario}, você fará 100 anos "
                   f"em {ano_corrente + subtracao_anos}.")
             while True:
