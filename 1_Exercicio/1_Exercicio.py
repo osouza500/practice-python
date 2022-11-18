@@ -14,7 +14,7 @@ def cem_anos_em():
     nome_usuario = input("Qual é o seu nome?\n")
     idade_usuario = int(input("Qual é a sua idade?\n"))
     while True:
-        if int(idade_usuario) >= 100:
+        if idade_usuario >= 100:
             print("Você já tem 100 anos ou mais. Por favor, "
                   "digite um número válido.")
             cem_anos_em()
@@ -34,4 +34,5 @@ def cem_anos_em():
                     print("Por favor, digite uma resposta válida.")
 
 
-cem_anos_em()
+if __name__ == "__main__":
+    cem_anos_em()
