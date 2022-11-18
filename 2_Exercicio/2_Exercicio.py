@@ -1,14 +1,25 @@
+import time
+
+def executar_programa():
+    par_ou_impar()
+    divisao_exata()
+
+def printar_pausar(mensagem):
+    time.sleep(1)
+    print(mensagem)
+
 def par_ou_impar():
     try:
-        numero = int(input("Por favor, digite um número.\n"))
+        printar_pausar("Por favor, digite um número.")
+        numero = int(input())
         if numero % 4 == 0 and numero % 2 == 0:
-            print(f"{numero} é um número par e múltiplo de 4.")
+            printar_pausar(f"{numero} é um número par e múltiplo de 4.")
         elif numero % 4 != 0 and numero % 2 == 0:
-            print(f"{numero} é um número par.")
+            printar_pausar(f"{numero} é um número par.")
         elif numero % 2 != 0:
-            print(f"{numero} é um número ímpar.")
+            printar_pausar(f"{numero} é um número ímpar.")
     except ValueError:
-        print("Por favor, digite um número válido.")
+        printar_pausar("Por favor, digite um número válido.")
         par_ou_impar()        
     
     # Desafio extra: coletar dois números e verificar se a
@@ -16,21 +27,21 @@ def par_ou_impar():
 
 def divisao_exata():   
     try:
-        numero_2 = int(input("Por favor, digite outro número.\n"))
-        checar_numero = int(input("Agora digite outro número para "
-                              "verificar se a divisão entre " 
-                              "ambos é exata.\n"))
+        printar_pausar("Agora vamos verificar se a divisão "
+                       "entre dois números é exata.")
+        printar_pausar("Por favor, digite um número.")
+        numero_2 = int(input())
+        printar_pausar("Agora digite outro número.")
+        checar_numero = int(input())
         resultado = numero_2 % checar_numero
         if resultado == 0:
-            print(f"{numero_2} dividido por {checar_numero} é "
+            printar_pausar(f"{numero_2} dividido por {checar_numero} é "
                    "uma divisão exata.")
         elif resultado != 0:
-            print(f"{numero_2} dividido por {checar_numero} "
+            printar_pausar(f"{numero_2} dividido por {checar_numero} "
                    "não é uma divisão exata.")
     except ValueError:
-        print("Por favor, digite um número válido.")
+        printar_pausar("Por favor, digite um número válido.")
         divisao_exata()                
 
-
-par_ou_impar()
-divisao_exata()
+executar_programa()
