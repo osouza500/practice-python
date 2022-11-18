@@ -1,5 +1,9 @@
 def par_ou_impar():
-    numero = int(input("Por favor, digite um número.\n"))
+    try:
+        numero = int(input("Por favor, digite um número.\n"))
+    except ValueError:
+        print("Por favor, digite um número válido.")
+        par_ou_impar()
     if numero % 4 == 0 and numero % 2 == 0:
         print(f"{numero} é um número par e múltiplo de 4.")
     elif numero % 4 != 0 and numero % 2 == 0:
@@ -17,7 +21,9 @@ def par_ou_impar():
     if resultado == 0:
         print(f"{numero_2} dividido por {checar_numero} é "
                "uma divisão exata.")
-    elif resultado =! 0: 
+    elif resultado != 0:
+        print(f"{numero_2} dividido por {checar_numero} "
+               "não é uma divisão exata.") 
 
 
 par_ou_impar()
