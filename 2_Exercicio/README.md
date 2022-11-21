@@ -7,7 +7,7 @@ A tarefa é pedir ao usuário que digite um número e retornar uma mensagem comu
 
 Há dois desafios extras: 
 
-1. Verificar se o número digitado pelo usuário é também é múltiplo de 4;
+1. Verificar se o número digitado pelo usuário também é múltiplo de 4;
 2. Coletar dois números e checar se a divisão entre ambos é exata.
 
 ## Minha solução
