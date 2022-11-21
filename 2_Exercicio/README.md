@@ -15,5 +15,5 @@ Há dois desafios extras:
 Usei uma declaração composta **try/except** para assegurar que, caso o usuário digite um texto, 
 o programa seja reinicado ao invés de crashar.
 
-Para identificar se o número é par, par e múltiplo de 4 ou ímpar, usei o operações módulo e
+Para identificar se o número é par, par e múltiplo de 4 ou ímpar, usei operações módulo e
 instruções **if/elif**.
