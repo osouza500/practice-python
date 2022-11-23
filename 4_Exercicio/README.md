@@ -12,4 +12,4 @@ descobrir se a divisão é exata.
 Caso a divisão seja exata, o número originário da primeira lista é adicionado à uma nova lista
 a partir do método **.append()**. Ao cabo do loop, a nova lista é printada.
 
-Usei o método **.join()** para apresenter a lista sem os colchetes.
+Usei o método **.join()** para apresentar a lista sem os colchetes.
