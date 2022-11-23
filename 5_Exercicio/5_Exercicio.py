@@ -1,4 +1,5 @@
-import random 
+import random
+
 
 def lista_aleatoria():
     lista = []
@@ -10,21 +11,33 @@ def lista_aleatoria():
             pass
     return lista
 
+
 def comparar_listas():
     lista_1 = lista_aleatoria()
     lista_2 = lista_aleatoria()
     lista_final = []
-    contagem = 0
+    # descobre qual lista é maior.
     if len(lista_1) > len(lista_2):
-        
+        maior_lista = lista_1
+        menor_lista = lista_2
+    else:
+        maior_lista = lista_2
+        menor_lista = lista_1
+    # determina o número de iterações baseado
+    # na lista com o maior número de itens.
+    for numero in maior_lista:
+        if numero in menor_lista:
+            lista_final.append(numero)
+        else:
+            pass
+    # para printar a lista sem colchetes
+    resultado_final = ', '.join(str(item) for item in lista_final)
+    if lista_final == []:
+        print("Não há nenhum número em comum.")
+    else:
+        print(f"Ambas as listas tem em comum o(s) "
+              f"número(s) {resultado_final}.")
 
-    
-      
 
-    # print(lista_1)
-    # print(lista_2)    
-    # print(len(lista_1))
-    # print(len(lista_2))
-    
-
-comparar_listas()        
+if __name__ == "__main__":
+    comparar_listas()
