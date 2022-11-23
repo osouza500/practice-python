@@ -9,7 +9,7 @@ Limitei o alcance da lista contendo os números a serem divididos a partir da fu
 números desta lista. Usei a instrução condicional **if** e o operador **módulo** para
 descobrir se a divisão é exata.
 
-Caso a divisão seja exata, o número originário da primeira lista é adicionado à uma nova lista
+Caso a divisão seja exata, o número originário da primeira lista é adicionado a uma nova lista
 a partir do método **.append()**. Ao cabo do loop, a nova lista é printada.
 
 Usei o método **.join()** para apresentar a lista sem os colchetes.
