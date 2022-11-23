@@ -16,7 +16,7 @@ def comparar_listas():
     lista_1 = lista_aleatoria()
     lista_2 = lista_aleatoria()
     lista_final = []
-    # descobre qual lista é maior.
+    # descobre qual lista é maior
     if len(lista_1) > len(lista_2):
         maior_lista = lista_1
         menor_lista = lista_2
@@ -24,7 +24,7 @@ def comparar_listas():
         maior_lista = lista_2
         menor_lista = lista_1
     # determina o número de iterações baseado
-    # na lista com o maior número de itens.
+    # na lista com o maior número de itens
     for numero in maior_lista:
         if numero in menor_lista:
             lista_final.append(numero)
