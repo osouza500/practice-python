@@ -1,7 +1,8 @@
 import random
 
-def continuar_sair ():
-    resposta = input("Jogar novamente? S/N.").lower()
+
+def continuar_sair():
+    resposta = input("Jogar novamente? S/N.\n").lower()
     if resposta == "s":
         jogo_adivinhacao()
     elif resposta == "n":
@@ -11,7 +12,8 @@ def continuar_sair ():
         print("Input inválido.")
         continuar_sair()
 
-def jogo_adivinhacao ():
+
+def jogo_adivinhacao():
     tentativas = 0
     numero = random.randint(1, 9)
     while True:
@@ -35,6 +37,7 @@ def jogo_adivinhacao ():
         elif resposta_usuario > numero:
             tentativas += 1
             print("Chutou alto.")
-    
-jogo_adivinhacao()
-    
+
+
+if __name__ == "__main__":
+    jogo_adivinhacao()
