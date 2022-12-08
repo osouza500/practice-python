@@ -16,16 +16,14 @@ def lista_aleatoria():
 def comparar_lista():
     lista_1 = lista_aleatoria()
     lista_2 = lista_aleatoria()
-    # determina qual lista é maior
-    if len(lista_1) > len(lista_2):
-        maior_lista = lista_1
-        menor_lista = lista_2
-    else:
-        maior_lista = lista_2
-        menor_lista = lista_1
-    # adiciona os números coincidentes em
-    # em uma nova lista
-    lista_final = [numero for numero in maior_lista if numero in menor_lista]
+    # identifica qual lista é maior
+    # ou se ambas têm o mesmo tamanho
+    if len(lista_1) > len(lista_2) or len(lista_1) == len(lista_2):
+        # adiciona os números coincidentes
+        # em uma nova lista
+        lista_final = [numero for numero in lista_1 if numero in lista_2]
+    elif len(lista_2) > len(lista_1):
+        lista_final = [numero for numero in lista_1 if numero in lista_2]
     if lista_final == []:
         print("Nenhum número em comum.")
     else:
