@@ -1,17 +1,15 @@
 def input_usuario():
-    try:
-        numero = int(input("Digite um número maior que 1.\n"))
-        if numero <= 1:
+    while True:
+        try:
+            resposta = int(input("Digite um número maior que 1.\n"))
+            if resposta <= 1:
+                print("Input inválido.")
+            else:
+                return resposta
+        except ValueError:
             print("Input inválido.")
-            input_usuario()
-        else:
-            return numero
-    except ValueError:
-        print("Input inválido.")
-        input_usuario()
 
-def numero_primo():
-    numero = input_usuario()
+def numero_primo(numero):
     for ciclo in range(2, numero):
         if numero % ciclo == 0:
             print(f"{numero} não é um número primo.")
@@ -20,4 +18,4 @@ def numero_primo():
             print(f"{numero} é um número primo.")
             break
         
-numero_primo()
+numero_primo(input_usuario())
