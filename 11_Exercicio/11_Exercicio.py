@@ -9,6 +9,7 @@ def input_usuario():
         except ValueError:
             print("Input inválido.")
 
+
 def numero_primo(numero):
     if numero == 2:
         print("2 é um número primo.")
@@ -18,6 +19,7 @@ def numero_primo(numero):
             print(f"{numero} não é um número primo.")
             quit()
     print(f"{numero} é um número primo.")
-        
 
-numero_primo(input_usuario())
+
+if __name__ == "__main__":
+    numero_primo(input_usuario())
