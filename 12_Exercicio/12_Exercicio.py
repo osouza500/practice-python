@@ -1,9 +1,8 @@
 import random 
 
 def lista_aleatoria():
-    lista_aleatoria = []
-    for ciclo in range(random.randint(1, 50)):
-        lista_aleatoria.append(ciclo)   
+    lista_aleatoria = [random.randint(1, 50) for ciclo in range(random.randint(1, 50))]
+    print(lista_aleatoria)
     return lista_aleatoria
 
 
