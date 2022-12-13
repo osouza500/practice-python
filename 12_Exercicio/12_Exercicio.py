@@ -1,5 +1,13 @@
-def primeiro_ultimo():
-    lista = [5, 10, 15, 20, 25]
+import random 
+
+def lista_aleatoria():
+    lista_aleatoria = []
+    for ciclo in range(random.randint(1, 50)):
+        lista_aleatoria.append(ciclo)   
+    return lista_aleatoria
+
+
+def primeiro_ultimo(lista):
     nova_lista = [
         numero for numero in lista 
         if numero == lista[0] 
@@ -7,4 +15,4 @@ def primeiro_ultimo():
         ]
     print(nova_lista)
 
-primeiro_ultimo()
+primeiro_ultimo(lista_aleatoria())
