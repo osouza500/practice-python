@@ -1,11 +1,11 @@
-import random 
+import random
+
 
 def lista_aleatoria():
     # cria uma lista aleatória
     lista_aleatoria = [random.randint(1, 50) for ciclo in range(random.randint(1, 50))]
     # remove números repetidos
     lista_aleatoria = list(set(lista_aleatoria))
-    print(lista_aleatoria)
     return lista_aleatoria
 
 
@@ -16,4 +16,6 @@ def primeiro_ultimo(lista):
     nova_lista = [lista[0], lista[-1]]
     print(nova_lista)
 
-primeiro_ultimo(lista_aleatoria())
+if __name__ == "__main__":
+    primeiro_ultimo(lista_aleatoria())
+
