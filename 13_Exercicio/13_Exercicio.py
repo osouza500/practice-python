@@ -5,6 +5,7 @@ def printar_pausar(mensagem):
     time.sleep(.5)
     print(mensagem)
 
+
 def sequencia_fibonacci():
     seq_fib = []
     printar_pausar("Quantos números na sequência?")
@@ -16,7 +17,7 @@ def sequencia_fibonacci():
             seq_fib.append(1)
         else:
             seq_fib.append(seq_fib[-1] + seq_fib[-2])
-    print(seq_fib)
+    print(", ".join(map(str, seq_fib)))
 
 sequencia_fibonacci()
 
