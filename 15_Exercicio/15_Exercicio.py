@@ -7,7 +7,8 @@ def frase_contrario():
         frase_contrario.append(frase[-1])
         frase.pop()
     nova_frase = ' '.join(frase_contrario)
-    print(nova_frase)    
+    print(nova_frase)
 
-frase_contrario()
 
+if __name__ == "__main__":
+    frase_contrario()
